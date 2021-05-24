@@ -74,7 +74,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Covid_Resources':
-                l = ['FootBall']
+                l = ['CovidResources','Covid_Resources','Safety_Measures','CommunityResources','Sanitation','CovidVaccine','Covid_Vaccine','StayHome','SafetyInstructions','Safety_Instructions','TollNumber','WhatsappHelp','VerifiedHelpline','BedAvailability','HelpLine','Treatment','DoctorProtection','TeleConsultation','ImmunityBooster','Immunity_Booster']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Education':
@@ -82,7 +82,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Mental_Health':
-                l = ['FootBall']
+                l = ['MenthaHealth','MenthaHealthDay','Talk','WorldMenthaHealth','BeKind','Myths','MenthaHealthMyths','MalasyisStats','ChildMenthaHealth','Child_MenthaHealth','Happiness','Bullying','BeingDifferent','CyberBullying','Help','Psychology','Causes','Elderly','ContactHelp','CovidImpact']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Art':

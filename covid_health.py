@@ -1,7 +1,8 @@
 import os
 
-topic = 'Technology'
-l = ['Technology_1','Technology_2','Technology_3','Technology_4','Technology_5','Technology_6','Technology_7','Technology_8','Technology_9','Technology_10','Technology_11','Technology_12','Technology_13','Technology_14','Technology_15','Technology_16','Technology_17','Technology_18','Technology_19']
+topic = 'Mental_Health'
+# l = ['CovidResources','Covid_Resources','Safety_Measures','CommunityResources','Sanitation','CovidVaccine','Covid_Vaccine','StayHome','SafetyInstructions','Safety_Instructions','TollNumber','WhatsappHelp','VerifiedHelpline','BedAvailability','HelpLine','Treatment','DoctorProtection','TeleConsultation','ImmunityBooster','Immunity_Booster']
+l = ['MenthaHealth','MenthaHealthDay','Talk','WorldMenthaHealth','BeKind','Myths','MenthaHealthMyths','MalasyisStats','ChildMenthaHealth','Child_MenthaHealth','Happiness','Bullying','BeingDifferent','CyberBullying','Help','Psychology','Causes','Elderly','ContactHelp','CovidImpact']
 if not os.path.isdir('./project/main/templates/main/'+topic):
 	os.mkdir('./project/main/templates/main/'+topic)
 
