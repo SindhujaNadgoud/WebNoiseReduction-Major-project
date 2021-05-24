@@ -66,7 +66,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Sports':
-                l = ['FootBall']
+                l = ['Sports_1','Sports_2','Sports_3','Sports_4','Sports_5','Sports_6','Sports_7','Sports_8','Sports_9','Sports_10','Sports_11','Sports_12','Sports_13','Sports_14','Sports_15','Sports_16','Sports_17','Sports_18','Sports_19']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'News':
@@ -90,7 +90,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Technology':
-                l = ['FootBall']
+                l = ['Technology_1','Technology_2','Technology_3','Technology_4','Technology_5','Technology_6','Technology_7','Technology_8','Technology_9','Technology_10','Technology_11','Technology_12','Technology_13','Technology_14','Technology_15','Technology_16','Technology_17','Technology_18','Technology_19']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
                 
     return render(request=request, template_name='main/welcome.html')   
