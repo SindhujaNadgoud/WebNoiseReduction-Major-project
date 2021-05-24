@@ -70,7 +70,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'News':
-                l = ['FootBall']
+                l = ['News_1','News_2','News_3','News_4','News_5','News_6','News_7','News_8','News_9','News_10','News_11','News_12','News_13','News_14','News_15','News_16','News_17','News_18','News_19']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Covid_Resources':
@@ -78,7 +78,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Education':
-                l = ['FootBall']
+                l = ['Education_1','Education_2','Education_3','Education_4','Education_5','Education_6','Education_7','Education_8','Education_9','Education_10','Education_11','Education_12','Education_13','Education_14','Education_15','Education_16','Education_17','Education_18','Education_19']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html')
 
             if topic_id == 'Mental_Health':
