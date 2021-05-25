@@ -1,0 +1,11 @@
+server_ip,User_id,Access_page,Date_Time,URL
+http://127.0.0.1:8000/,,/,2021-05-25 10:25:21,http://127.0.0.1:8000/
+http://127.0.0.1:8000/,,/,2021-05-25 10:25:22,http://127.0.0.1:8000/
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-25 10:25:54,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-25 10:25:59,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Cinema,2021-05-25 10:25:59,http://127.0.0.1:8000/view_project/Cinema
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Cinema/Jahnvi,2021-05-25 10:26:03,http://127.0.0.1:8000/view_project/Cinema/Jahnvi
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-25 10:27:41,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-25 10:27:44,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Education,2021-05-25 10:27:44,http://127.0.0.1:8000/view_project/Education
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Education/Education_5,2021-05-25 10:27:46,http://127.0.0.1:8000/view_project/Education/Education_5

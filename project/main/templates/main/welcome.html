@@ -3,23 +3,6 @@
      You all are welcome to access this website
     </title>
   <body>
-    <!-- {% csrf_token %} 
-    <form>
-    <label for="topic">Pick a category:</label>
-    
-    <select name="topic" id="topic">
-      <option value="news">News</option>
-      <option value="covid">Covid Resources</option>
-      <option value="cinema">Cinema</option>
-      <option value="sports">Sports</option>
-      <option value="education">Education</option>
-      <option value="mental">Mental Health</option>
-      <option value="art">Art</option>
-      <option value="technology">Technology</option>
-    </select>
-    <button value="submit" type="submit">
-        Submit</button>
-</form> -->
 
 <form method="POST">{% csrf_token %}
     <select name = "topic_id">
@@ -34,5 +17,10 @@
     </select>
 <input type="submit"  value="View Details" />
     </form>
+    <h3> Top user interests</h3>
+    <ul>
+      <li>News</li>
+      <l1> Sports</l1>
+    </ul>
   </body>
 </head>

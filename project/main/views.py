@@ -7,7 +7,17 @@ from django.contrib.auth import login, authenticate #add this
 from django.contrib.auth.forms import AuthenticationForm #add this
 from django.shortcuts import redirect
 from django.urls import reverse
+import os
+import datetime
 
+def gen_log(username, access_page, datetime):
+    if not os.path.isdir('./log'):
+        os.mkdir('./log')
+    if not os.path.isfile('./log/weblog.csv'):
+        with open('./log/weblog.csv', 'w') as o:
+            o.write('server_ip,User_id,Access_page,Date_Time,URL'+'\n')
+    with open('./log/weblog.csv', 'a') as o:
+        o.write('http://127.0.0.1:8000/'+','+username+','+access_page+','+datetime+','+'http://127.0.0.1:8000'+access_page+'\n')
 
 def register_request(request):
     if request.method == "POST":
@@ -42,9 +52,15 @@ def login_request(request):
 
 # Create your views here.
 def homepage(request):
+    username = request.user.username
+    dt = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    gen_log(username, '/', dt)
     return render(request=request, template_name='main/home.html')
 
 def welcome(request):
+    username = request.user.username
+    dt = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    gen_log(username, '/welcome', dt)
     if request.method == 'POST':
     #   form = WelcomeForm(request.POST)
         choice = request.POST.get('topic_id')
@@ -56,6 +72,12 @@ def welcome(request):
 def view_project(request, topic_id, link_id = 'Default'):
     '''if request.method == 'POST':
         topic_id = request.POST.get('topic_id');print(topic_id);return redirect(reverse('view_project', args=(topic_id)))'''
+    username = request.user.username
+    dt = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    if link_id == 'Default':
+        gen_log(username, '/view_project/'+topic_id, dt)
+    else:
+        gen_log(username, '/view_project/'+topic_id+'/'+link_id, dt)
     if request.method == 'GET':
         if link_id == 'Default':
             d = {'News':1, 'Covid_Resources':2, 'Cinema':3, 'Sports':4, 'Education':5, 'Mental_Health':6, 'Art':7, 'Technology':8}
