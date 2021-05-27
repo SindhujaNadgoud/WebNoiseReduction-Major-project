@@ -38,6 +38,7 @@ def upload():
     global filename
     filename = askopenfilename(initialdir = "dataset")
     pathlabel.config(text=filename)
+    
     with open(filename, "r") as file:
       for line in file:
        line = line.strip('\n')
@@ -216,10 +217,30 @@ def confusionMatrix():
     text.insert(END,"Noise : "+str(tn+fp+fn)+"\n")
     
     
-
+import os
 def openpage():
    input = simpledialog.askstring("Filter", "Enter Page URL",parent=main)
-   webbrowser.open_new_tab(input)
+   text.insert(END,"Users who visited this page are")
+   text.insert(END,users_url(input))
+
+
+def users_url(url):
+  global filename
+  text.delete('1.0', END)
+  users = {}
+  with open(filename) as o:
+    l = o.readlines()
+  for i in range(1, len(l)):
+    s = l[i].split(',')
+    if url == s[4][:-1]:
+      if s[1] != '' and s[1] not in users.keys():
+        users[s[1]] = 1
+      elif s[1] != '':
+        users[s[1]] += 1
+  return users
+
+#users = users_url('http://127.0.0.1:8000/welcome')
+#print(users)
 
 font = ('times', 20, 'bold')
 title = Label(main, text='Noise Reduction in Web Data: A Learning Approach Based on Dynamic User Interests')
