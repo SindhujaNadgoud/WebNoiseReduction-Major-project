@@ -1,7 +1,69 @@
 <html>
- <h6><Cinema</h6>   
 
- <a href="/view_project/Cinema/Aishwarya_Rai">Aishwarya Rai</a>
+<head>
+    <title>
+        Cinema
+    </title>
+    <style>
+        .grid-container {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          background-color: #03213a;
+          padding: 8px;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 15px;
+          font-size: 25px;
+          text-align: center;
+        }
+        
+        .heading {
+        display: inline-grid;
+            grid-template-columns: 30cm 5cm;
+            padding: 8px;
+        }
+        .heading-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .heading span {
+            display:inline-block;
+            font-weight:normal;
+            font-size:.75em;
+            padding: left 50px;
+            text-align:right;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="heading">
+        <div class="heading-content">
+ <h2 >Cinema </h2>
+</div>
+<div class="heading-content">
+ <span>
+<form method="POST">{% csrf_token %}
+    <select name = "topic_id">
+        <option value="News">News</option>
+        <option value="Covid_Resources">Covid Resources</option>
+        <option value="Cinema">Cinema</option>
+        <option value="Sports">Sports</option>
+        <option value="Education">Education</option>
+        <option value="Mental_Health">Mental Health</option>
+        <option value="Art">Art</option>
+        <option value="Technology">Technology</option>
+    </select>
+<input type="submit"  value="View Details" />
+    </form> 
+</span> 
+</div>
+</div>   
+
+ <!-- <a href="/view_project/Cinema/Aishwarya_Rai">Aishwarya Rai</a>
  <a href="/view_project/Cinema/Madhuri_Dixit">Madhuri Dixit</a>
  <a href="/view_project/Cinema/Alia_Bhatt">Alia_Bhatt</a>
  <a href="/view_project/Cinema/Rani_Mukerjee">Rani_Mukerjee</a>
@@ -20,7 +82,114 @@
  <a href="/view_project/Cinema/Deepika_Ranveer_1">Deepika & Ranveer</a>
  <a href="/view_project/Cinema/Deepika">Deepika Padukone</a>
  <a href="/view_project/Cinema/Sonam">Sonam Kapoor</a>
- <a href="/view_project/Cinema/Disha">Disha Patani</a>
+ <a href="/view_project/Cinema/Disha">Disha Patani</a> -->
+ {% load static %}
+    <center>
+ <div class="grid-container">
+     
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Aishwarya_Rai">
+            <img alt="Qries" src="{% static 'Cinema/1.jpg' %}"width="150" height="70"><br>Aishwarya Rai
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Madhuri_Dixit">
+            <img alt="Qries" src="{% static 'Cinema/2.jpg' %}"width="150" height="70"><br>Madhuri Dixit
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Alia_Bhatt">
+            <img alt="Qries" src="{% static 'Cinema/3.jpg' %}"width="150" height="70"><br>Alia_Bhatt
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Rani_Mukerjee">
+            <img alt="Qries" src="{% static 'Cinema/4.jpg' %}"width="150" height="70"><br>Rani_Mukerjee
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Deepika_Ranveer">
+            <img alt="Qries" src="{% static 'Cinema/5.jpg' %}"width="150" height="70"><br>Deepika_Ranveer
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Jahnvi">
+            <img alt="Qries" src="{% static 'Cinema/6.jpg' %}"width="150" height="70"><br>Jahnvi
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Virat_Anushka">
+            <img alt="Qries" src="{% static 'Cinema/7.jpg' %}"width="150" height="70"><br>Virat_Anushka
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Sara">
+            <img alt="Qries" src="{% static 'Cinema/8.jpg' %}"width="150" height="70"><br>Sara
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Ananya">
+            <img alt="Qries" src="{% static 'Cinema/9.jpg' %}"width="150" height="70"><br>Ananya
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Tara">
+            <img alt="Qries" src="{% static 'Cinema/10.jpg' %}"width="150" height="70"><br>Tara
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Pooja">
+            <img alt="Qries" src="{% static 'Cinema/11.jpg' %}"width="150" height="70"><br>Pooja Hegde
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Deepika_Saree">
+            <img alt="Qries" src="{% static 'Cinema/12.jpg' %}"width="150" height="70"><br>Deepika in a saree
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Saif">
+            <img alt="Qries" src="{% static 'Cinema/13.jpg' %}"width="150" height="70"><br>Saif and Kareena
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Alia_Bhatt_1">
+            <img alt="Qries" src="{% static 'Cinema/14.jpg' %}"width="150" height="70"><br>Alia Bhatt Airport look
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Director">
+            <img alt="Qries" src="{% static 'Cinema/15.jpg' %}"width="150" height="70"><br>Director
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Tabu">
+            <img alt="Qries" src="{% static 'Cinema/16.jpg' %}"width="150" height="70"><br>Tabu
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Deepika_Ranveer_1">
+            <img alt="Qries" src="{% static 'Cinema/17.jpg' %}"width="150" height="70"><br>Deepika & Ranveer
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Deepika">
+            <img alt="Qries" src="{% static 'Cinema/18.jpg' %}"width="150" height="70"><br>Deepika Padukone
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Sonam">
+            <img alt="Qries" src="{% static 'Cinema/19.jpg' %}"width="150" height="70"><br>Sonam Kapoor
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Cinema/Disha">
+            <img alt="Qries" src="{% static 'Cinema/20.jpg' %}"width="150" height="70"><br>Disha Patani
+        </a>
+    </div>
+  </div>
+</center>
+
+</body>
 
 </html>
 

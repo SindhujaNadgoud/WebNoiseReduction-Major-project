@@ -1,7 +1,70 @@
 <html>
- <h6>ART</h6>   
 
- <a href="/view_project/Art/Florals">Watercolour Florals</a><br><br>
+<head>
+    <title>
+        Art
+    </title>
+    <style>
+        .grid-container {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          background-color: #03213a;
+          padding: 8px;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 15px;
+          font-size: 25px;
+          text-align: center;
+        }
+        
+        .heading {
+        display: inline-grid;
+            grid-template-columns: 30cm 5cm;
+            padding: 8px;
+        }
+        .heading-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .heading span {
+            display:inline-block;
+            font-weight:normal;
+            font-size:.75em;
+            padding: left 50px;
+            text-align:right;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="heading">
+        <div class="heading-content">
+ <h2 >Art </h2>
+</div>
+<div class="heading-content">
+ <span>
+<form method="POST">{% csrf_token %}
+    <select name = "topic_id">
+        <option value="News">News</option>
+        <option value="Covid_Resources">Covid Resources</option>
+        <option value="Cinema">Cinema</option>
+        <option value="Sports">Sports</option>
+        <option value="Education">Education</option>
+        <option value="Mental_Health">Mental Health</option>
+        <option value="Art">Art</option>
+        <option value="Technology">Technology</option>
+    </select>
+<input type="submit"  value="View Details" />
+    </form> 
+</span> 
+</div>
+    </div>          
+   
+
+ <!-- <a href="/view_project/Art/Florals">Watercolour Florals</a><br><br>
  <a href="/view_project/Art/Cherry_Blossoms">Cherry Cherry_Blossoms</a><br><br>
  <a href="/view_project/Art/Giraffe">Giraffe</a><br><br>
  <a href="/view_project/Art/Ocean">Ocean</a><br><br>
@@ -19,7 +82,115 @@
  <a href="/view_project/Art/Abstract_1">Abstract_1</a><br><br>
  <a href="/view_project/Art/Watercolour_Landscape_1">Watercolour_Landscape_1</a><br><br>
  <a href="/view_project/Art/Watercolour_Landscape_2">Watercolour_Landscape_2</a><br><br>
- <a href="/view_project/Art/Acrylic_Landscape_2">Acrylic_Landscape_2 </a><br><br>
+ <a href="/view_project/Art/Acrylic_Landscape_2">Acrylic_Landscape_2 </a><br><br> -->
+ {% load static %}
+ <center>
+<div class="grid-container">
+  
+ <div class="grid-item">
+     <a href="/view_project/Art/Florals">
+         <img alt="Qries" src="{% static 'Art/1.jpg' %}"width="150" height="70"><br>Watercolour Florals
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Cherry_Blossoms">
+         <img alt="Qries" src="{% static 'Art/2.jpg' %}"width="150" height="70"><br>Cherry Cherry_Blossoms
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Giraffe">
+         <img alt="Qries" src="{% static 'Art/3.jpg' %}"width="150" height="70"><br>Giraffe
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Ocean">
+         <img alt="Qries" src="{% static 'Art/4.jpg' %}"width="150" height="70"><br>Ocean
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Lemons">
+         <img alt="Qries" src="{% static 'Art/5.jpg' %}"width="150" height="70"><br>Lemons
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Landscape_1">
+         <img alt="Qries" src="{% static 'Art/6.jpg' %}"width="150" height="70"><br>Landscape_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Watercolor_1">
+         <img alt="Qries" src="{% static 'Art/7.jpg' %}"width="150" height="70"><br>Watercolor_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Daisey">
+         <img alt="Qries" src="{% static 'Art/8.jpg' %}"width="150" height="70"><br>Daisy Acrylic
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Acrylic_Woman">
+         <img alt="Qries" src="{% static 'Art/9.jpg' %}"width="150" height="70"><br>Acrylic_Woman
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Watercolour_Landscape">
+         <img alt="Qries" src="{% static 'Art/10.jpg' %}"width="150" height="70"><br>Watercolour_Landscape
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Watercolour_Landscape_Blue">
+         <img alt="Qries" src="{% static 'Art/11.jpg' %}"width="150" height="70"><br>Watercolour_Landscape_Blue
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Daisy_2">
+         <img alt="Qries" src="{% static 'Art/12.jpg' %}"width="150" height="70"><br>Daisy_2
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Acrylic_Trees">
+         <img alt="Qries" src="{% static 'Art/13.jpg' %}"width="150" height="70"><br>Acrylic_Trees
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Ocean_1">
+         <img alt="Qries" src="{% static 'Art/14.jpg' %}"width="150" height="70"><br>Ocean_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Acrylic_Landscape_1">
+         <img alt="Qries" src="{% static 'Art/15.jpg' %}"width="150" height="70"><br>Acrylic_Landscape_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Abstract_1">
+         <img alt="Qries" src="{% static 'Art/16.jpg' %}"width="150" height="70"><br>Abstract_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Acrylic_Landscape_2">
+         <img alt="Qries" src="{% static 'Art/17.jpg' %}"width="150" height="70"><br>Acrylic_Landscape_2
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Watercolour_Landscape_1">
+         <img alt="Qries" src="{% static 'Art/18.jpg' %}"width="150" height="70"><br>Watercolour_Landscape_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Watercolour_Landscape_2">
+         <img alt="Qries" src="{% static 'Art/19.jpg' %}"width="150" height="70"><br>Watercolour_Landscape_2
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Art/Acrylic_Landscape_2">
+         <img alt="Qries" src="{% static 'Art/20.jpg' %}"width="150" height="70"><br>Acrylic_Landscape_2
+     </a>
+ </div>
+</div>
+</center>
+
+</body>
 
 </html>
 

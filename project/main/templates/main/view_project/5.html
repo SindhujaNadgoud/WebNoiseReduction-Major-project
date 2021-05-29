@@ -1,7 +1,69 @@
 <html>
- <h6>Education</h6>   
 
- <a href="/view_project/Education/Education_1">Education_1</a><br><br>
+<head>
+    <title>
+       Education
+    </title>
+    <style>
+        .grid-container {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          background-color: #03213a;
+          padding: 8px;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 15px;
+          font-size: 25px;
+          text-align: center;
+        }
+        
+        .heading {
+        display: inline-grid;
+            grid-template-columns: 30cm 5cm;
+            padding: 8px;
+        }
+        .heading-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .heading span {
+            display:inline-block;
+            font-weight:normal;
+            font-size:.75em;
+            padding: left 50px;
+            text-align:right;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="heading">
+        <div class="heading-content">
+ <h2 >Education </h2>
+</div>
+<div class="heading-content">
+ <span>
+<form method="POST">{% csrf_token %}
+    <select name = "topic_id">
+        <option value="News">News</option>
+        <option value="Covid_Resources">Covid Resources</option>
+        <option value="Cinema">Cinema</option>
+        <option value="Sports">Sports</option>
+        <option value="Education">Education</option>
+        <option value="Mental_Health">Mental Health</option>
+        <option value="Art">Art</option>
+        <option value="Technology">Technology</option>
+    </select>
+<input type="submit"  value="View Details" />
+    </form> 
+</span> 
+</div>
+    </div>          
+
+ <!-- <a href="/view_project/Education/Education_1">Education_1</a><br><br>
  <a href="/view_project/Education/Education_2">Education_2</a><br><br>
  <a href="/view_project/Education/Education_3">Education_3</a><br><br>
  <a href="/view_project/Education/Education_4">Education_4</a><br><br>
@@ -20,5 +82,113 @@
  <a href="/view_project/Education/Education_17">Education_17</a><br><br>
  <a href="/view_project/Education/Education_18">Education_18</a><br><br>
  <a href="/view_project/Education/Education_19">Education_19</a><br><br>
- 
+  -->
+  {% load static %}
+  <center>
+<div class="grid-container">
+   
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/CovidResources">
+          <img alt="Qries" src="{% static 'Education/1.jpg' %}"width="150" height="70"><br>Education_1
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Covid_Resources">
+          <img alt="Qries" src="{% static 'Education/2.jpg' %}"width="150" height="70"><br>Education_2
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Safety_Measures">
+          <img alt="Qries" src="{% static 'Education/3.jpg' %}"width="150" height="70"><br>Education_3
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/CommunityResources">
+          <img alt="Qries" src="{% static 'Education/4.jpg' %}"width="150" height="70"><br>Education_4
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Sanitation">
+          <img alt="Qries" src="{% static 'Education/5.jpg' %}"width="150" height="70"><br>Education_5
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/CovidVaccine">
+          <img alt="Qries" src="{% static 'Education/6.jpg' %}"width="150" height="70"><br>Education_6
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Covid_Vaccine">
+          <img alt="Qries" src="{% static 'Education/7.jpg' %}"width="150" height="70"><br>Education_7
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/StayHome">
+          <img alt="Qries" src="{% static 'Education/8.jpg' %}"width="150" height="70"><br>Education_8
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/SafetyInstructions">
+          <img alt="Qries" src="{% static 'Education/9.jpg' %}"width="150" height="70"><br>Education_9
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Safety_Instructions">
+          <img alt="Qries" src="{% static 'Education/10.jpg' %}"width="150" height="70"><br>Education_10
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/TollNumber">
+          <img alt="Qries" src="{% static 'Education/11.jpg' %}"width="150" height="70"><br>Education_11
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/WhatsappHelp">
+          <img alt="Qries" src="{% static 'Education/12.jpg' %}"width="150" height="70"><br>Education_12
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/VerifiedHelpline">
+          <img alt="Qries" src="{% static 'Education/13.jpg' %}"width="150" height="70"><br>Education_13
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/BedAvailability">
+          <img alt="Qries" src="{% static 'Education/14.jpg' %}"width="150" height="70"><br>Education_14
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/HelpLine">
+          <img alt="Qries" src="{% static 'Education/15.jpg' %}"width="150" height="70"><br>Education_15
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Treatment">
+          <img alt="Qries" src="{% static 'Education/16.jpg' %}"width="150" height="70"><br>Education_16
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/DoctorProtection">
+          <img alt="Qries" src="{% static 'Education/17.jpg' %}"width="150" height="70"><br>Education_17
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/TeleConsultation">
+          <img alt="Qries" src="{% static 'Education/18.jpg' %}"width="150" height="70"><br>Education_18
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/ImmunityBooster">
+          <img alt="Qries" src="{% static 'Education/19.jpg' %}"width="150" height="70"><br>Education_19
+      </a>
+  </div>
+  <div class="grid-item">
+      <a href="/view_project/Covid_Resources/Immunity_Booster">
+          <img alt="Qries" src="{% static 'Education/20.jpg' %}"width="150" height="70"><br>Education_20
+      </a>
+  </div>
+</div>
+</center>
+
+</body>
 </html>

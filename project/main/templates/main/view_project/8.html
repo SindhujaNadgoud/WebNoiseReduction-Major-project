@@ -1,7 +1,70 @@
 <html>
- <h6>Technology</h6>   
 
- <a href="/view_project/Technology/Technology_1">Technology_1</a><br><br>
+<head>
+    <title>
+        Technology
+    </title>
+    <style>
+        .grid-container {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          background-color: #03213a;
+          padding: 8px;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 15px;
+          font-size: 25px;
+          text-align: center;
+        }
+        
+        .heading {
+        display: inline-grid;
+            grid-template-columns: 30cm 5cm;
+            padding: 8px;
+        }
+        .heading-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .heading span {
+            display:inline-block;
+            font-weight:normal;
+            font-size:.75em;
+            padding: left 50px;
+            text-align:right;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="heading">
+        <div class="heading-content">
+ <h2 >Technology</h2>
+</div>
+<div class="heading-content">
+ <span>
+<form method="POST">{% csrf_token %}
+    <select name = "topic_id">
+        <option value="News">News</option>
+        <option value="Covid_Resources">Covid Resources</option>
+        <option value="Cinema">Cinema</option>
+        <option value="Sports">Sports</option>
+        <option value="Education">Education</option>
+        <option value="Mental_Health">Mental Health</option>
+        <option value="Art">Art</option>
+        <option value="Technology">Technology</option>
+    </select>
+<input type="submit"  value="View Details" />
+    </form> 
+</span> 
+</div>
+    </div>          
+   
+
+ <!-- <a href="/view_project/Technology/Technology_1">Technology_1</a><br><br>
  <a href="/view_project/Technology/Technology_2">Technology_2</a><br><br>
  <a href="/view_project/Technology/Technology_3">Technology_3</a><br><br>
  <a href="/view_project/Technology/Technology_4">Technology_4</a><br><br>
@@ -19,8 +82,117 @@
  <a href="/view_project/Technology/Technology_16">Technology_16</a><br><br>
  <a href="/view_project/TechnologyTechnology_17">Technology_17</a><br><br>
  <a href="/view_project/Technology/Technology_18">Technology_18</a><br><br>
- <a href="/view_project/Technology/Technology_19">Technology_19</a><br><br>
+ <a href="/view_project/Technology/Technology_19">Technology_19</a><br><br> -->
 
+ {% load static %}
+ <center>
+<div class="grid-container">
+  
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_1">
+         <img alt="Qries" src="{% static 'Technology/1.jpg' %}"width="150" height="70"><br>Technology_1
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_2">
+         <img alt="Qries" src="{% static 'Technology/2.jpg' %}"width="150" height="70"><br>Technology_2
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_3">
+         <img alt="Qries" src="{% static 'Technology/3.jpg' %}"width="150" height="70"><br>Technology_3
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_4">
+         <img alt="Qries" src="{% static 'Technology/4.jpg' %}"width="150" height="70"><br>Technology_4
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_5">
+         <img alt="Qries" src="{% static 'Technology/5.jpg' %}"width="150" height="70"><br>Technology_5
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_6">
+         <img alt="Qries" src="{% static 'Technology/6.jpg' %}"width="150" height="70"><br>Technology_6
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_7">
+         <img alt="Qries" src="{% static 'Technology/7.jpg' %}"width="150" height="70"><br>Technology_7
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_8">
+         <img alt="Qries" src="{% static 'Technology/8.jpg' %}"width="150" height="70"><br>Technology_8
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_9">
+         <img alt="Qries" src="{% static 'Technology/9.jpg' %}"width="150" height="70"><br>Technology_9
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_10">
+         <img alt="Qries" src="{% static 'Technology/10.jpg' %}"width="150" height="70"><br>Technology_10
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_11">
+         <img alt="Qries" src="{% static 'Technology/11.jpg' %}"width="150" height="70"><br>Technology_11
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_12">
+         <img alt="Qries" src="{% static 'Technology/12.jpg' %}"width="150" height="70"><br>Technology_12
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_13">
+         <img alt="Qries" src="{% static 'Technology/13.jpg' %}"width="150" height="70"><br>Technology_13
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_14">
+         <img alt="Qries" src="{% static 'Technology/14.jpg' %}"width="150" height="70"><br>Technology_14
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_15">
+         <img alt="Qries" src="{% static 'Technology/15.jpg' %}"width="150" height="70"><br>Technology_15
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_16">
+         <img alt="Qries" src="{% static 'Technology/16.jpg' %}"width="150" height="70"><br>Technology_16
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_17">
+         <img alt="Qries" src="{% static 'Technology/17.jpg' %}"width="150" height="70"><br>Technology_17
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_18">
+         <img alt="Qries" src="{% static 'Technology/18.jpg' %}"width="150" height="70"><br>Technology_18
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_19">
+         <img alt="Qries" src="{% static 'Technology/19.jpg' %}"width="150" height="70"><br>Technology_19
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Technology/Technology_20">
+         <img alt="Qries" src="{% static 'Technology/20.jpg' %}"width="150" height="70"><br>Technology_20
+     </a>
+ </div>
+ 
+</div>
+</center>
+
+</body>
 </html>
 
 

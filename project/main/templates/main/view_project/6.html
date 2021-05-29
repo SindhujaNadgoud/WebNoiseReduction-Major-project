@@ -1,9 +1,72 @@
 
 
 <html>
- <h6>Mental Health</h6>   
 
- <a href="/view_project/Mental_Health/MenthaHealth">Mental Health</a>
+    <head>
+        <title>
+            Mental_Health
+        </title>
+        <style>
+            .grid-container {
+              display: inline-grid;
+              grid-template-columns: auto auto auto auto;
+              background-color: #03213a;
+              padding: 8px;
+            }
+            
+            .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 15px;
+              font-size: 25px;
+              text-align: center;
+            }
+            
+            .heading {
+            display: inline-grid;
+                grid-template-columns: 30cm 5cm;
+                padding: 8px;
+            }
+            .heading-content {
+                padding: 15px;
+                text-align: center;
+            }
+            .heading span {
+                display:inline-block;
+                font-weight:normal;
+                font-size:.75em;
+                padding: left 50px;
+                text-align:right;
+            }
+            </style>
+    
+    </head>
+    <body>
+        <div class="heading">
+            <div class="heading-content">
+     <h2 >Mental_Health </h2>
+    </div>
+    <div class="heading-content">
+     <span>
+    <form method="POST">{% csrf_token %}
+        <select name = "topic_id">
+            <option value="News">News</option>
+            <option value="Covid_Resources">Covid Resources</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Sports">Sports</option>
+            <option value="Education">Education</option>
+            <option value="Mental_Health">Mental Health</option>
+            <option value="Art">Art</option>
+            <option value="Technology">Technology</option>
+        </select>
+    <input type="submit"  value="View Details" />
+        </form> 
+    </span> 
+    </div>
+        </div>          
+       
+
+ <!-- <a href="/view_project/Mental_Health/MenthaHealth">Mental Health</a>
  <a href="/view_project/Mental_Health/MenthaHealthDay">Mentha Health Day</a>
  <a href="/view_project/Mental_Health/Talk">Talk about it</a>
  <a href="/view_project/Mental_Health/WorldMenthaHealth">World Mentha Health</a>
@@ -22,7 +85,115 @@
  <a href="/view_project/Mental_Health/Causes">Causes</a>
  <a href="/view_project/Mental_Health/Elderly">Elderly Mental Health</a>
  <a href="/view_project/Mental_Health/ContactHelp">ContactHelp </a>
- <a href="/view_project/Mental_Health/CovidImpact">CovidImpact</a>
+ <a href="/view_project/Mental_Health/CovidImpact">CovidImpact</a> -->
+ {% load static %}
+ <center>
+<div class="grid-container">
+  
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/MenthaHealth">
+         <img alt="Qries" src="{% static 'Mental_Health/1.jpg' %}"width="150" height="70"><br>Mental Health
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/MenthaHealthDay">
+         <img alt="Qries" src="{% static 'Mental_Health/2.jpg' %}"width="150" height="70"><br>Mentha Health Day
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Talk">
+         <img alt="Qries" src="{% static 'Mental_Health/3.jpg' %}"width="150" height="70"><br>Talk about it
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/WorldMenthaHealth">
+         <img alt="Qries" src="{% static 'Mental_Health/4.jpg' %}"width="150" height="70"><br>World Mentha Health
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/BeKind">
+         <img alt="Qries" src="{% static 'Mental_Health/5.jpg' %}"width="150" height="70"><br>Be kind to your Mind
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Myths">
+         <img alt="Qries" src="{% static 'Mental_Health/6.jpg' %}"width="150" height="70"><br>Medical Myths
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/MenthaHealthMyths">
+         <img alt="Qries" src="{% static 'Mental_Health/7.jpg' %}"width="150" height="70"><br>Mentha Health Myths
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/MalasyisStats">
+         <img alt="Qries" src="{% static 'Mental_Health/8.jpg' %}"width="150" height="70"><br>Malasyis Stats
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/ChildMenthaHealth">
+         <img alt="Qries" src="{% static 'Mental_Health/9.jpg' %}"width="150" height="70"><br>Child Mentha Health
+     </a>
+ </div>
+ <div class="grid-item">
+    <a href="/view_project/Mental_Health/Child_MenthaHealth">
+        <img alt="Qries" src="{% static 'Mental_Health/10.jpg' %}"width="150" height="70"><br>Children Mental Health
+    </a>
+</div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Happiness">
+         <img alt="Qries" src="{% static 'Mental_Health/11.jpg' %}"width="150" height="70"><br>Select Happiness
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Bullying">
+         <img alt="Qries" src="{% static 'Covid_Resources/12.jpg' %}"width="150" height="70"><br>Bullying
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/BeingDifferent">
+         <img alt="Qries" src="{% static 'Mental_Health/13.jpg' %}"width="150" height="70"><br>Being Different
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/CyberBullying">
+         <img alt="Qries" src="{% static 'Mental_Health/14.jpg' %}"width="150" height="70"><br>Cyber Bullying
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Help">
+         <img alt="Qries" src="{% static 'Mental_Health/15.jpg' %}"width="150" height="70"><br>Take Help
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Psychology">
+         <img alt="Qries" src="{% static 'Mental_Health/16.jpg' %}"width="150" height="70"><br>Psychology
+     </a>
+ </div>
+ 
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Causes">
+         <img alt="Qries" src="{% static 'Mental_Health/17.jpg' %}"width="150" height="70"><br>Causes
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/Elderly">
+         <img alt="Qries" src="{% static 'Mental_Health/18.jpg' %}"width="150" height="70"><br>Elderly Mental Health
+     </a>
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/ContactHelp">
+         <img alt="Qries" src="{% static 'Mental_Health/19.jpg' %}"width="150" height="70"><br>ContactHelp
+ </div>
+ <div class="grid-item">
+     <a href="/view_project/Mental_Health/CovidImpact">
+         <img alt="Qries" src="{% static 'Mental_Health/20.jpg' %}"width="150" height="70"><br>CovidImpact
+     </a>
+ </div>
+</div>
+</center>
+
+</body>
 
 </html>
 
