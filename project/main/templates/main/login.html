@@ -4,14 +4,31 @@
 
 {% load crispy_forms_tags %}
 
+<head>
+  <title>
+   You all are welcome to access this website
+  </title>
+  {% if messages %}
+  {% for message in messages %}
+
+  <script>
+    alert("{{ message }}");
+  </script>
+
+  {% endfor %}
+  {% endif %}
+</head>
+<center>
 <!--Login--> 
 <div class="container py-5">
   <h1>Login</h1>
   <form method="POST">
     {% csrf_token %}
     {{ login_form|crispy }}
+    <br>
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
   <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
 </div>
+</center>
 {% endblock %}

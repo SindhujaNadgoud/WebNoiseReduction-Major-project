@@ -37,10 +37,11 @@ def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
         if form.is_valid():
+            username = request.POST['username']#Added
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful." )
-            return redirect("main:homepage")
+            return redirect("main:login")
         messages.error(request, "Unsuccessful registration. Invalid information.")
     form = NewUserForm()
     return render (request=request, template_name="main/register.html", context={"register_form":form})
@@ -54,7 +55,7 @@ def login_request(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}.")
+                messages.success(request, f"You are now logged in as {username}.")
                 return redirect("main:welcome")
             else:
                 messages.error(request,"Invalid username or password.")
@@ -84,6 +85,12 @@ def welcome(request):
     return render(request=request, template_name='main/welcome.html')   
 
 def view_project(request, topic_id, link_id = 'Default'):
+    if request.method == 'POST':
+    #   form = WelcomeForm(request.POST)
+        choice = request.POST.get('topic_id')
+        print(choice)
+        #return render(request=request, template_name='main/view_project/'+str(choice)+'.html')
+        return redirect('/view_project/'+choice)
     '''if request.method == 'POST':
         topic_id = request.POST.get('topic_id');print(topic_id);return redirect(reverse('view_project', args=(topic_id)))'''
     username = request.user.username

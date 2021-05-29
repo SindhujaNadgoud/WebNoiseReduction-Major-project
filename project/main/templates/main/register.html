@@ -2,7 +2,22 @@
 
 {% block content %} 
 
-{% load crispy_forms_tags %}         
+{% load crispy_forms_tags %}  
+
+<head>
+    <title>
+     You all are welcome to access this website
+    </title>
+    {% if messages %}
+    {% for message in messages %}
+  
+    <script>
+      alert("{{ message }}");
+    </script>
+  
+    {% endfor %}
+    {% endif %}
+  </head>
 
 <!--Register--> 
 <div class="container py-5">

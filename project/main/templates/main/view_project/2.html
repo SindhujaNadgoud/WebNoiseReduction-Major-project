@@ -1,8 +1,68 @@
-
-
 <html>
- <h6>Covid_Resources</h6>   
-               
+
+<head>
+    <title>
+        Covid_Resources
+    </title>
+    <style>
+        .grid-container {
+          display: inline-grid;
+          grid-template-columns: auto auto auto auto;
+          background-color: #03213a;
+          padding: 8px;
+        }
+        
+        .grid-item {
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 15px;
+          font-size: 25px;
+          text-align: center;
+        }
+        
+        .heading {
+        display: inline-grid;
+            grid-template-columns: 30cm 5cm;
+            padding: 8px;
+        }
+        .heading-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .heading span {
+            display:inline-block;
+            font-weight:normal;
+            font-size:.75em;
+            padding: left 50px;
+            text-align:right;
+        }
+        </style>
+
+</head>
+<body>
+    <div class="heading">
+        <div class="heading-content">
+ <h2 >Covid_Resources </h2>
+</div>
+<div class="heading-content">
+ <span>
+<form method="POST">{% csrf_token %}
+    <select name = "topic_id">
+        <option value="News">News</option>
+        <option value="Covid_Resources">Covid Resources</option>
+        <option value="Cinema">Cinema</option>
+        <option value="Sports">Sports</option>
+        <option value="Education">Education</option>
+        <option value="Mental_Health">Mental Health</option>
+        <option value="Art">Art</option>
+        <option value="Technology">Technology</option>
+    </select>
+<input type="submit"  value="View Details" />
+    </form> 
+</span> 
+</div>
+</div>
+<!--                
  <a href="/view_project/Covid_Resources/CovidResources">CovidResources</a>
  <a href="/view_project/Covid_Resources/Covid_Resources">Covid_Resources</a>
  <a href="/view_project/Covid_Resources/Safety_Measures">Safety_Measures</a>
@@ -22,7 +82,115 @@
  <a href="/view_project/Covid_Resources/DoctorProtection">DoctorProtection</a>
  <a href="/view_project/Covid_Resources/TeleConsultation">TeleConsultation</a>
  <a href="/view_project/Covid_Resources/ImmunityBooster">ImmunityBooster</a>
- <a href="/view_project/Covid_Resources/Immunity_Booster">Immunity_Booster</a>
+ <a href="/view_project/Covid_Resources/Immunity_Booster">Immunity_Booster</a> -->
 
+ {% load static %}
+    <center>
+ <div class="grid-container">
+     
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/CovidResources">
+            <img alt="Qries" src="{% static 'Covid_Resources/1.jpg' %}"width="150" height="70"><br>Covid_Vaccine
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Covid_Resources">
+            <img alt="Qries" src="{% static 'Covid_Resources/2.jpg' %}"width="150" height="70"><br>Covid_Resources
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Safety_Measures">
+            <img alt="Qries" src="{% static 'Covid_Resources/3.jpg' %}"width="150" height="70"><br>Safety_Measures
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/CommunityResources">
+            <img alt="Qries" src="{% static 'Covid_Resources/4.jpg' %}"width="150" height="70"><br>CommunityResources
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Sanitation">
+            <img alt="Qries" src="{% static 'Covid_Resources/5.jpg' %}"width="150" height="70"><br>Sanitation
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/CovidVaccine">
+            <img alt="Qries" src="{% static 'Covid_Resources/6.jpg' %}"width="150" height="70"><br>CovidVaccine
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Covid_Vaccine">
+            <img alt="Qries" src="{% static 'Covid_Resources/7.jpg' %}"width="150" height="70"><br>Covid_Vaccine
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/StayHome">
+            <img alt="Qries" src="{% static 'Covid_Resources/8.jpg' %}"width="150" height="70"><br>StayHome
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/SafetyInstructions">
+            <img alt="Qries" src="{% static 'Covid_Resources/9.jpg' %}"width="150" height="70"><br>SafetyInstructions
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Safety_Instructions">
+            <img alt="Qries" src="{% static 'Covid_Resources/10.jpg' %}"width="150" height="70"><br>Safety_Instructions
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/TollNumber">
+            <img alt="Qries" src="{% static 'Covid_Resources/11.jpg' %}"width="150" height="70"><br>TollNumber
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/WhatsappHelp">
+            <img alt="Qries" src="{% static 'Covid_Resources/12.jpg' %}"width="150" height="70"><br>WhatsappHelp
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/VerifiedHelpline">
+            <img alt="Qries" src="{% static 'Covid_Resources/13.jpg' %}"width="150" height="70"><br>VerifiedHelpline
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/BedAvailability">
+            <img alt="Qries" src="{% static 'Covid_Resources/14.jpg' %}"width="150" height="70"><br>BedAvailability
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/HelpLine">
+            <img alt="Qries" src="{% static 'Covid_Resources/15.jpg' %}"width="150" height="70"><br>HelpLine
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Treatment">
+            <img alt="Qries" src="{% static 'Covid_Resources/16.jpg' %}"width="150" height="70"><br>Treatment
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/DoctorProtection">
+            <img alt="Qries" src="{% static 'Covid_Resources/17.jpg' %}"width="150" height="70"><br>DoctorProtection
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/TeleConsultation">
+            <img alt="Qries" src="{% static 'Covid_Resources/18.jpg' %}"width="150" height="70"><br>TeleConsultation
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/ImmunityBooster">
+            <img alt="Qries" src="{% static 'Covid_Resources/19.jpg' %}"width="150" height="70"><br>ImmunityBooster
+        </a>
+    </div>
+    <div class="grid-item">
+        <a href="/view_project/Covid_Resources/Immunity_Booster">
+            <img alt="Qries" src="{% static 'Covid_Resources/20.jpg' %}"width="150" height="70"><br>Immunity_Booster
+        </a>
+    </div>
+  </div>
+</center>
+
+</body>
 </html>
 
