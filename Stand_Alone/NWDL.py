@@ -38,7 +38,7 @@ def upload():
     global filename
     filename = askopenfilename(initialdir = "dataset")
     pathlabel.config(text=filename)
-    
+
     with open(filename, "r") as file:
       for line in file:
        line = line.strip('\n')
@@ -69,7 +69,7 @@ def getFrequency(user,page,date):
           if diff > 1:
             frequency = frequency + 1
     return frequency
-    
+
 def findSession():
     global total_count
     text.delete('1.0', END)
@@ -81,10 +81,10 @@ def findSession():
       if up.getUser()+up.getWebpage() not in processpage:
         processpage.append(up.getUser()+up.getWebpage())
         frequency = getFrequency(up.getUser(),up.getWebpage(),up.getDate());
-        if frequency > 1:
+        if frequency > 1 and up.getWebpage()!="/welcome":
           count = getDepth(up.getUser());
           weight = (frequency/count) * 100;
-          print("User ID : "+up.getUser()+" Frequency : "+str(frequency))
+          print("User ID : "+up.getUser()+" Frequency : "+str(frequency)+" webpage:"+up.getWebpage())
           up.setFrequency(frequency)
           up.setWeight(weight);
           up.setPageDepth(count)
@@ -97,7 +97,7 @@ def findSession():
     f = open("dataset.csv", "w")
     f.write(dataset)
     f.close()
-    text.insert(END,"Total Frequent Users Size : "+str(total_count))
+    text.insert(END,"Total No.of Frequently accessed web pages : "+str(total_count))
 
 def graph():
     technology = 0;
@@ -133,8 +133,8 @@ def graph():
     y_pos = np.arange(len(bars))
     plt.bar(y_pos, height)
     plt.xticks(y_pos, bars)
-    plt.show()	
-    
+    plt.show()
+
 def viewinterest():
     text.delete('1.0', END)
     input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
@@ -190,7 +190,7 @@ def confusionMatrix():
     text.insert(END,"\nNaive Bayes Confusion Matrix\n");
     text.insert(END,"Interest : "+str(tp)+"\n")
     text.insert(END,"Noise : "+str(tn+fp+fn)+"\n")
-    
+
     cls = svm.SVC()
     cls.fit(X, Y)
     predict = cls.predict(X)
@@ -198,25 +198,25 @@ def confusionMatrix():
     text.insert(END,"\nSVM Confusion Matrix\n\n");
     text.insert(END,"Interest : "+str(tp)+"\n")
     text.insert(END,"Noise : "+str(tn+fp+fn)+"\n")
-   
+
     cls = RandomForestClassifier()
     cls.fit(X, Y)
     predict = cls.predict(X)
     tn, fp, fn, tp = confusion_matrix(Y,predict).ravel()
-    tp = tp - 3 
+    tp = tp - 3
     text.insert(END,"\nRandom Forest Confusion Matrix\n\n");
     text.insert(END,"Interest : "+str(tp)+"\n")
     text.insert(END,"Noise : "+str(tn+fp+fn+3)+"\n")
-   
-    cls = KNeighborsClassifier(n_neighbors = 2) 
+
+    cls = KNeighborsClassifier(n_neighbors = 2)
     cls.fit(X, Y)
     predict = cls.predict(X)
     tn, fp, fn, tp = confusion_matrix(Y,predict).ravel()
     text.insert(END,"\nKNearest Neighbour Confusion Matrix\n\n");
     text.insert(END,"Interest : "+str(tp)+"\n")
     text.insert(END,"Noise : "+str(tn+fp+fn)+"\n")
-    
-    
+
+
 import os
 def openpage():
    input = simpledialog.askstring("Filter", "Enter Page URL",parent=main)
@@ -244,40 +244,40 @@ def users_url(url):
 
 font = ('times', 20, 'bold')
 title = Label(main, text='Noise Reduction in Web Data: A Learning Approach Based on Dynamic User Interests')
-title.config(bg='brown', fg='white')  
-title.config(font=font)           
-title.config(height=3, width=80)       
+title.config(bg='brown', fg='white')
+title.config(font=font)
+title.config(height=3, width=80)
 title.place(x=5,y=5)
 
 font1 = ('times', 14, 'bold')
 upload = Button(main, text="Upload Weblog Dataset", command=upload)
 upload.place(x=50,y=100)
-upload.config(font=font1)  
+upload.config(font=font1)
 
 pathlabel = Label(main)
-pathlabel.config(bg='brown', fg='white')  
-pathlabel.config(font=font1)           
+pathlabel.config(bg='brown', fg='white')
+pathlabel.config(font=font1)
 pathlabel.place(x=300,y=100)
 
-depthbutton = Button(main, text="Calculate Depth User Visit", command=findSession)
+depthbutton = Button(main, text="No.of frequently accessed pages", command=findSession)
 depthbutton.place(x=50,y=150)
-depthbutton.config(font=font1) 
+depthbutton.config(font=font1)
 
 userinterest = Button(main, text="View User Interest Pages", command=viewinterest)
 userinterest.place(x=330,y=150)
-userinterest.config(font=font1) 
+userinterest.config(font=font1)
 
 matrix = Button(main, text="View Confusion Matrix", command=confusionMatrix)
 matrix.place(x=610,y=150)
-matrix.config(font=font1) 
+matrix.config(font=font1)
 
 graph = Button(main, text="Dynamic Interest Category Graph", command=graph)
 graph.place(x=870,y=150)
-graph.config(font=font1) 
+graph.config(font=font1)
 
 openpage = Button(main, text="Open Interested Page", command=openpage)
 openpage.place(x=50,y=200)
-openpage.config(font=font1) 
+openpage.config(font=font1)
 
 font1 = ('times', 12, 'bold')
 text=Text(main,height=25,width=150)
