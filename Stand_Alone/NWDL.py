@@ -142,8 +142,9 @@ def graph():
     y_pos = np.arange(len(bars))
     plt.bar(y_pos, height)
     plt.xticks(y_pos, bars)
-    plt.xlabel("TOPIC")
+    plt.xlabel("Category")
     plt.ylabel("Number of viewed pages in category")
+    plt.title("This weeks interests of users ")
     plt.show()
 
 def viewinterest():
@@ -212,8 +213,6 @@ def viewinterest():
     print(y)
     plt.pie(y, labels = mylabels,normalize=True)
     plt.show()
-
-
 
 
 
@@ -337,20 +336,20 @@ pathlabel.place(x=300,y=100)
 #depthbutton.place(x=50,y=150)
 #depthbutton.config(font=font1)
 
-userinterest = Button(main, text="Interested Pages", command=viewinterest)
+userinterest = Button(main, text="User Interests", command=viewinterest)
 userinterest.place(x=50,y=150)
 userinterest.config(font=font1)
 
 matrix = Button(main, text="Confusion Matrix", command=confusionMatrix)
-matrix.place(x=220,y=150)
+matrix.place(x=650,y=150)
 matrix.config(font=font1)
 
 graph = Button(main, text="Category Graph", command=graph)
-graph.place(x=400,y=150)
+graph.place(x=450,y=150)
 graph.config(font=font1)
 
-openpage = Button(main, text="Users Interested in Page", command=openpage)
-openpage.place(x=600,y=150)
+openpage = Button(main, text="Overview of page visits", command=openpage)
+openpage.place(x=220,y=150)
 openpage.config(font=font1)
 
 font1 = ('times', 12, 'bold')
