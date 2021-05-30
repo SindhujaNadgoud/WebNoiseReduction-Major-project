@@ -1,0 +1,19 @@
+server_ip,User_id,Access_page,Date_Time,URL
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-30 15:03:46,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-30 15:13:44,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-30 15:13:51,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Covid_Resources,2021-05-30 15:13:51,http://127.0.0.1:8000/view_project/Covid_Resources
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Covid_Resources/TollNumber,2021-05-30 15:13:56,http://127.0.0.1:8000/view_project/Covid_Resources/TollNumber
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-30 15:14:02,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/welcome,2021-05-30 15:16:12,http://127.0.0.1:8000/welcome
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Covid_Resources,2021-05-30 15:16:12,http://127.0.0.1:8000/view_project/Covid_Resources
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Covid_Resources,2021-05-30 15:16:45,http://127.0.0.1:8000/view_project/Covid_Resources
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Education,2021-05-30 15:16:51,http://127.0.0.1:8000/view_project/Education
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Cinema,2021-05-30 15:16:56,http://127.0.0.1:8000/view_project/Cinema
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Art,2021-05-30 15:17:06,http://127.0.0.1:8000/view_project/Art
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Art/Giraffe,2021-05-30 15:17:18,http://127.0.0.1:8000/view_project/Art/Giraffe
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Art/Florals,2021-05-30 15:17:42,http://127.0.0.1:8000/view_project/Art/Florals
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Art/Florals,2021-05-30 15:18:11,http://127.0.0.1:8000/view_project/Art/Florals
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Art/Florals,2021-05-30 15:18:30,http://127.0.0.1:8000/view_project/Art/Florals
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Cinema,2021-05-30 15:23:12,http://127.0.0.1:8000/view_project/Cinema
+http://127.0.0.1:8000/,YaramadaAkshara,/view_project/Education,2021-05-30 15:23:14,http://127.0.0.1:8000/view_project/Education

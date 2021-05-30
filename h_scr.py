@@ -7,4 +7,4 @@ if not os.path.isdir('./project/main/templates/main/'+topic):
 
 for i in range(1,len(l)+1):
 	with open('./project/main/templates/main/'+topic+'/'+topic.lower()+str(i)+'.html','w') as o:
-		o.write('\n{% load static %}\n<body>\n<center>\n<img src=\"{% static \''+topic+'/'+str(i)+'.jpg\' %}\" scale=\"0\" width=\"50%\" height=\"60%\">\n</center>\n<h3> Number of views per page: {{views_no}}</h3>\n</body>')
+		o.write('\n{% load static %}\n<body>\n<center>\n<img src=\"{% static \''+topic+'/'+str(i)+'.jpg\' %}\" scale=\"0\" width=\"50%\" height=\"60%\">\n</center>\n<h3> Number of times visited: {{views_no}}</h3>\n</body>')

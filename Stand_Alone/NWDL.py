@@ -37,8 +37,8 @@ def upload():
     j = 0;
     global filename
     filename = askopenfilename(initialdir = "dataset")
-    pathlabel.config(text=filename)
-
+    #pathlabel.config(text=filename)
+    #text.insert(END,'Dataset Uploaded')
     with open(filename, "r") as file:
       for line in file:
        line = line.strip('\n')
@@ -52,6 +52,7 @@ def upload():
          up.setURL(arr[4])
          userprofile.append(up);
        j = j + 1
+    findSession()
 
 def getDepth(user):
     count = 0;
@@ -77,11 +78,12 @@ def findSession():
     depth.clear()
     total_count = 0;
     dataset = 'frequency,weight,count,label\n'
+    webpages_frequent=[]
     for up in userprofile:
       if up.getUser()+up.getWebpage() not in processpage:
         processpage.append(up.getUser()+up.getWebpage())
         frequency = getFrequency(up.getUser(),up.getWebpage(),up.getDate());
-        if frequency > 1 and up.getWebpage()!="/welcome":
+        if frequency > 1 and up.getWebpage()!="/welcome" and up.getWebpage()!="/" and up.getWebpage()!="/view_project/Art"  and up.getWebpage()!="/view_project/News"  and up.getWebpage()!="/view_project/Mental_Health"  and up.getWebpage()!="/view_project/Education"  and up.getWebpage()!="/view_project/Sports"  and up.getWebpage()!="/view_project/Cinema"  and up.getWebpage()!="/view_project/Covid_Resources"  and up.getWebpage()!="/view_project/News":
           count = getDepth(up.getUser());
           weight = (frequency/count) * 100;
           print("User ID : "+up.getUser()+" Frequency : "+str(frequency)+" webpage:"+up.getWebpage())
@@ -90,6 +92,7 @@ def findSession():
           up.setPageDepth(count)
           depth[up.getUser].append(up)
           total_count = total_count + 1
+          webpages_frequent.append(up.getWebpage())
           if up.getWeight() >= 10:
               dataset+=str(frequency)+","+str(weight)+","+str(count)+",1\n"
           else:
@@ -97,7 +100,13 @@ def findSession():
     f = open("dataset.csv", "w")
     f.write(dataset)
     f.close()
-    text.insert(END,"Total No.of Frequently accessed web pages : "+str(total_count))
+    text.insert(END,'Dataset Uploaded Successfully\n')
+    text.insert(END,"Total number of frequently accessed web pages : "+str(total_count))
+    text.insert(END,"The most frequently acccessed pages are :")
+    text.insert(END,"\n")
+    for  i in range(len(webpages_frequent)):
+      text.insert(END,webpages_frequent[i])
+      text.insert(END,"\n")
 
 def graph():
     technology = 0;
@@ -114,8 +123,8 @@ def graph():
         technology = technology + 1;
       if 'News' in up.getURL():
         news = news + 1
-      if 'Welcome' in up.getURL():
-        home = home + 1
+    #  if 'Welcome' in up.getURL():
+     #   home = home + 1
       if 'Cinema' in up.getURL():
         cinema = cinema + 1
       if 'Sports' in up.getURL():
@@ -128,22 +137,84 @@ def graph():
         covid = covid + 1
       if 'Mental_Health' in up.getURL():
         health = health + 1
-    height = [home, news, technology, cinema, sports, edu, art,  covid, health]
-    bars = ('Home', 'News', 'Technology', 'Cinema','Sports', 'Education', 'Art', 'Covid_Resources', 'Mental_Health')
+    height = [news, technology, cinema, sports, edu, art,  covid, health]
+    bars = ( 'News', 'Technology', 'Cinema','Sports', 'Education', 'Art', 'Covid_Resources', 'Mental_Health')
     y_pos = np.arange(len(bars))
     plt.bar(y_pos, height)
     plt.xticks(y_pos, bars)
+    plt.xlabel("TOPIC")
+    plt.ylabel("Number of viewed pages in category")
     plt.show()
 
 def viewinterest():
     text.delete('1.0', END)
     input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
-    text.insert(END,"User ID\t\t\t\tFrequency\t\tWeight\t\t\tAverage Page Depth\t\t\tWeb Page Name\n\n");
+    text.insert(END,"User ID\t\t\t\tFrequency\t\tWeight\t\t\tWeb Page Name")
+    text.insert(END,"\n")
+    technology = 0;
+    news = 0;
+    home = 0;
+    cinema=0;
+    sports=0;
+    edu=0;
+    art=0;
+    covid=0;
+    health=0;
+    lst=[]
+    mylabels=[]
     for k, v in depth.items():
       for up in v:
         if(up.getUser() == input):
-          text.insert(END,up.getUser()+"\t\t\t\t"+str(up.getFrequency())+"\t\t"+str(up.getWeight())+"\t\t\t\t"+str(up.getPageDepth())+"\t\t"+up.getWebpage()+"\n");
+          text.insert(END,up.getUser()+"\t\t\t\t"+str(up.getFrequency())+"\t\t"+str(up.getWeight())+"\t\t\t\t"+up.getWebpage()+"\n")
           text.insert(END,"Complete Page URL : "+up.getURL()+"\n\n")
+          if 'Technology' in up.getURL():
+            technology = technology + 1;
+          if 'News' in up.getURL():
+            news = news + 1
+          if 'Cinema' in up.getURL():
+            cinema = cinema + 1
+          if 'Sports' in up.getURL():
+            sports = sports + 1
+          if 'Education' in up.getURL():
+            edu = edu + 1
+          if 'Art' in up.getURL():
+            art = art + 1
+          if 'Covid_Resources' in up.getURL():
+            covid = covid + 1
+          if 'Mental_Health' in up.getURL():
+            health = health + 1
+          if technology>1:
+            lst.append(technology)
+            mylabels.append("Technology")
+          if news>1:
+            lst.append(news)
+            mylabels.append("News")
+          if covid>1:
+            lst.append(covid)
+            mylabels.append("Covid Resources")
+          if health>1:
+            lst.append(health)
+            mylabels.append("Health")
+          if art>1:
+            lst.append(art)
+            mylabels.append("Art")
+          if edu>1:
+            lst.append(edu)
+            mylabels.append("Education")
+          if sports>1:
+            lst.append(sports)
+            mylabels.append("Sports")
+          if cinema>1:
+            lst.append(cinema)
+            mylabels.append("Cinema")
+    y = np.array(lst)
+    print("the list")
+    print(y)
+    plt.pie(y, labels = mylabels,normalize=True)
+    plt.show()
+
+
+
 
 
 def confusionMatrix():
@@ -166,7 +237,7 @@ def confusionMatrix():
     text.insert(END,"Propose NWDL Confusion Matrix\n\n");
     text.insert(END,"Interest : "+str(interest)+"\n")
     text.insert(END,"Noise : "+str(noise)+"\n")
-    text.insert(END,"Potential : "+str(potential)+"\n")
+    #text.insert(END,"Potential : "+str(potential)+"\n")
     text.insert(END,"Total : "+str(total_count)+"\n")
     '''
     text.insert(END,"SVM Confusion Matrix\n\n");
@@ -221,7 +292,10 @@ import os
 def openpage():
    input = simpledialog.askstring("Filter", "Enter Page URL",parent=main)
    text.insert(END,"Users who visited this page are")
-   text.insert(END,users_url(input))
+   s=users_url(input)
+   for pair in s.items():
+     text.insert(END,pair)
+     text.insert(END,"\n")
 
 
 def users_url(url):
@@ -243,7 +317,7 @@ def users_url(url):
 #print(users)
 
 font = ('times', 20, 'bold')
-title = Label(main, text='Noise Reduction in Web Data: A Learning Approach Based on Dynamic User Interests')
+title = Label(main, text='Reducing Noise based on Dynamic User Interests in Web Data')
 title.config(bg='brown', fg='white')
 title.config(font=font)
 title.config(height=3, width=80)
@@ -251,7 +325,7 @@ title.place(x=5,y=5)
 
 font1 = ('times', 14, 'bold')
 upload = Button(main, text="Upload Weblog Dataset", command=upload)
-upload.place(x=50,y=100)
+upload.place(x=310,y=100)
 upload.config(font=font1)
 
 pathlabel = Label(main)
@@ -259,24 +333,24 @@ pathlabel.config(bg='brown', fg='white')
 pathlabel.config(font=font1)
 pathlabel.place(x=300,y=100)
 
-depthbutton = Button(main, text="No.of frequently accessed pages", command=findSession)
-depthbutton.place(x=50,y=150)
-depthbutton.config(font=font1)
+#depthbutton = Button(main, text="No.of frequently accessed pages", command=upload)
+#depthbutton.place(x=50,y=150)
+#depthbutton.config(font=font1)
 
-userinterest = Button(main, text="View User Interest Pages", command=viewinterest)
-userinterest.place(x=330,y=150)
+userinterest = Button(main, text="Interested Pages", command=viewinterest)
+userinterest.place(x=50,y=150)
 userinterest.config(font=font1)
 
-matrix = Button(main, text="View Confusion Matrix", command=confusionMatrix)
-matrix.place(x=610,y=150)
+matrix = Button(main, text="Confusion Matrix", command=confusionMatrix)
+matrix.place(x=220,y=150)
 matrix.config(font=font1)
 
-graph = Button(main, text="Dynamic Interest Category Graph", command=graph)
-graph.place(x=870,y=150)
+graph = Button(main, text="Category Graph", command=graph)
+graph.place(x=400,y=150)
 graph.config(font=font1)
 
-openpage = Button(main, text="Open Interested Page", command=openpage)
-openpage.place(x=50,y=200)
+openpage = Button(main, text="Users Interested in Page", command=openpage)
+openpage.place(x=600,y=150)
 openpage.config(font=font1)
 
 font1 = ('times', 12, 'bold')

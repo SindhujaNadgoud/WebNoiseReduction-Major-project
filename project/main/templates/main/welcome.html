@@ -1,3 +1,4 @@
+<html>
 <head>
     <title>
       Home 
@@ -12,8 +13,12 @@
     {% endfor %}
     {% endif %}
   </head>
-  <body>
-<center>
+  <body style="background-color:#c7d6c9;">
+    <center>
+      <br/>
+    <h1>Reducing Noise based on Dynamic User Interests in Web Data</h1>
+    
+<br/><br/><br/>
 <form method="POST">{% csrf_token %}
     <select name = "topic_id">
         <option value="News">News</option>
@@ -27,11 +32,12 @@
     </select>
 <input type="submit"  value="View Details" />
     </form>
-    <h3> Top user interests</h3>
-    <ul>
-      <li>News</li>
-      <l1> Sports</l1>
+    <br/>
+    <h2>Your Top interests</h2>
+      <h4> - News</h4>
+      <h4> - Sports</h4>
+      
     </ul>
   </body>
 </center>
-</head>
+</html>
