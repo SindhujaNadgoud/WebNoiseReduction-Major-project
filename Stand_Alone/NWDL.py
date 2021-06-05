@@ -100,9 +100,9 @@ def findSession():
     f = open("dataset.csv", "w")
     f.write(dataset)
     f.close()
-    text.insert(END,'Dataset Uploaded Successfully\n')
+    text.insert(END,'Dataset Uploaded Successfully\n\n')
     text.insert(END,"Total number of frequently accessed web pages : "+str(total_count))
-    text.insert(END,"The most frequently acccessed pages are :")
+    text.insert(END,"\nThe most frequently acccessed pages are :")
     text.insert(END,"\n")
     for  i in range(len(webpages_frequent)):
       text.insert(END,webpages_frequent[i])
@@ -152,17 +152,29 @@ def viewinterest():
     input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
     text.insert(END,"User ID\t\t\t\tFrequency\t\tWeight\t\t\tWeb Page Name")
     text.insert(END,"\n")
-    technology = 0;
-    news = 0;
-    home = 0;
+    global technology
+    technology = 0
+    global news 
+    news = 0
+    global home
+    home = 0
+    global cinema
     cinema=0;
+    global sports
     sports=0;
+    global edu
     edu=0;
+    global art
     art=0;
+    global covid
     covid=0;
+    global health
     health=0;
+    global lst
     lst=[]
+    global mylabels
     mylabels=[]
+    print("Start Tech"+str(technology))
     for k, v in depth.items():
       for up in v:
         if(up.getUser() == input):
@@ -172,6 +184,7 @@ def viewinterest():
             technology = technology + 1;
           if 'News' in up.getURL():
             news = news + 1
+            print("news  "+str(news))
           if 'Cinema' in up.getURL():
             cinema = cinema + 1
           if 'Sports' in up.getURL():
@@ -184,35 +197,49 @@ def viewinterest():
             covid = covid + 1
           if 'Mental_Health' in up.getURL():
             health = health + 1
-          if technology>1:
-            lst.append(technology)
-            mylabels.append("Technology")
-          if news>1:
-            lst.append(news)
-            mylabels.append("News")
-          if covid>1:
-            lst.append(covid)
-            mylabels.append("Covid Resources")
-          if health>1:
-            lst.append(health)
-            mylabels.append("Health")
-          if art>1:
-            lst.append(art)
-            mylabels.append("Art")
-          if edu>1:
-            lst.append(edu)
-            mylabels.append("Education")
-          if sports>1:
-            lst.append(sports)
-            mylabels.append("Sports")
-          if cinema>1:
-            lst.append(cinema)
-            mylabels.append("Cinema")
+    print("technologyBegin"+str(technology))
+    if technology>0:
+      lst.append(technology)
+      mylabels.append("Technology")
+      print("technology"+str(technology))
+    if news>0:
+      lst.append(news)
+      mylabels.append("News")
+      print("news"+str(news))
+    if covid>0:
+      lst.append(covid)
+      mylabels.append("Covid Resources")
+      print("covid"+str(covid))
+    if health>0:
+      lst.append(health)
+      mylabels.append("Health")
+      print("health"+str(health))
+    if art>0:
+      lst.append(art)
+      mylabels.append("Art")
+      print("art"+str(art))
+    if edu>0:
+      lst.append(edu)
+      mylabels.append("Education")
+      print("edu"+str(edu))
+    if sports>0:
+      lst.append(sports)
+      mylabels.append("Sports")
+      print("sports"+str(sports))
+    if cinema>0:
+      lst.append(cinema)
+      mylabels.append("Cinema")
+      print("cinema"+str(cinema))
+    
     y = np.array(lst)
     print("the list")
     print(y)
     plt.pie(y, labels = mylabels,normalize=True)
     plt.show()
+        
+    print("edu"+str(edu))
+    print("art"+str(art))
+    print("health"+str(health))
 
 
 
