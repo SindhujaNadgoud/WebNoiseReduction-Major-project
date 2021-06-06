@@ -107,7 +107,83 @@ def findSession():
     for  i in range(len(webpages_frequent)):
       text.insert(END,webpages_frequent[i])
       text.insert(END,"\n")
+    technology = 0
+    news = 0
+    home = 0
+    cinema=0;
+    sports=0;
+    edu=0;
+    art=0;
+    covid=0;
+    health=0;
+    lst=[]
+    mylabels=[]
+    for  i in range(len(webpages_frequent)):
+      if 'Technology' in webpages_frequent[i]:
+        technology = technology + 1;
+      if 'News' in webpages_frequent[i]:
+        news = news + 1
+        print("news  "+str(news))
+      if 'Cinema' in webpages_frequent[i]:
+        cinema = cinema + 1
+      if 'Sports' in webpages_frequent[i]:
+        sports = sports + 1
+      if 'Education' in webpages_frequent[i]:
+        edu = edu + 1
+      if 'Art' in webpages_frequent[i]:
+        art = art + 1
+      if 'Covid_Resources' in webpages_frequent[i]:
+        covid = covid + 1
+      if 'Mental_Health' in webpages_frequent[i]:
+        health = health + 1
+    if technology>0:
+      lst.append(technology)
+      mylabels.append("Technology")
+      print("technology"+str(technology))
+    if news>0:
+      lst.append(news)
+      mylabels.append("News")
+      print("news"+str(news))
+    if covid>0:
+      lst.append(covid)
+      mylabels.append("Covid Resources")
+      print("covid"+str(covid))
+    if health>0:
+      lst.append(health)
+      mylabels.append("Health")
+      print("health"+str(health))
+    if art>0:
+      lst.append(art)
+      mylabels.append("Art")
+      print("art"+str(art))
+    if edu>0:
+      lst.append(edu)
+      mylabels.append("Education")
+      print("edu"+str(edu))
+    if sports>0:
+      lst.append(sports)
+      mylabels.append("Sports")
+      print("sports"+str(sports))
+    if cinema>0:
+      lst.append(cinema)
+      mylabels.append("Cinema")
+      print("cinema"+str(cinema))
+    
+    y = np.array(lst)
+    print("the list")
+    print(y)
+    plt.pie(y, labels = mylabels,normalize=True)
+    plt.show()
 
+
+
+
+
+
+
+
+
+      
 def graph():
     technology = 0;
     news = 0;
@@ -147,9 +223,29 @@ def graph():
     plt.title("This weeks interests of users ")
     plt.show()
 
+
+def viewuserprofile():
+    text.delete('1.0', END)
+    global input 
+    p_dict = {}
+    input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
+    text.insert(END,"User ID\t\t\t\tFrequency\t\t\t\t\tWeb Page Name")
+    text.insert(END,"\n")
+    with open(filename, "r") as o:
+      f_lines = o.readlines()
+    for i in range(len(f_lines)):
+      r = f_lines[i].split(',')
+      if r[1] == input:
+        if r[4] not in p_dict.keys():
+          p_dict[r[4]] = 1
+        else:
+          p_dict[r[4]] += 1
+    for key in p_dict.keys():
+      text.insert(END, input+'\t\t'+str(p_dict[key])+'\t\t\t'+key)
+
 def viewinterest():
     text.delete('1.0', END)
-    input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
+   # input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
     text.insert(END,"User ID\t\t\t\tFrequency\t\tWeight\t\t\tWeb Page Name")
     text.insert(END,"\n")
     global technology
@@ -354,6 +450,14 @@ upload = Button(main, text="Upload Weblog Dataset", command=upload)
 upload.place(x=310,y=100)
 upload.config(font=font1)
 
+userprofilebutton = Button(main, text="View User Profile", command=viewuserprofile)
+userprofilebutton.place(x=550,y=100)
+userprofilebutton.config(font=font1)
+
+
+
+
+
 pathlabel = Label(main)
 pathlabel.config(bg='brown', fg='white')
 pathlabel.config(font=font1)
@@ -362,6 +466,7 @@ pathlabel.place(x=300,y=100)
 #depthbutton = Button(main, text="No.of frequently accessed pages", command=upload)
 #depthbutton.place(x=50,y=150)
 #depthbutton.config(font=font1)
+
 
 userinterest = Button(main, text="User Interests", command=viewinterest)
 userinterest.place(x=50,y=150)
