@@ -1,8 +1,18 @@
-
+<head>
+    <style>
+    div {
+        padding: 70px;
+        border: 1px solid #4c9baf;
+      }
+    </style>
+</head>
 {% load static %}
 <body>
 <center>
 <img src="{% static 'Covid_Resources/14.jpg' %}" scale="0" width="50%" height="60%">
+<div>
+    You can click here to check COVID beds availability online Three options will appear on the screen: COVID-19 Beds, COVID-19 Oxygen Beds, COVID-19 ICU Beds Under each option there will be details of the COVID beds available, occupied, and vacant Click on the kind of bed you require to see the details of the hospitals
+</div>
 </center>
 <h3> Number of times visited: {{views_no}}</h3>
 </body>

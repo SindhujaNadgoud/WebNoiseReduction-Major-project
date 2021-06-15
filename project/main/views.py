@@ -111,11 +111,11 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Sports':
-                l = ['Sports_1','Sports_2','Sports_3','Sports_4','Sports_5','Sports_6','Sports_7','Sports_8','Sports_9','Sports_10','Sports_11','Sports_12','Sports_13','Sports_14','Sports_15','Sports_16','Sports_17','Sports_18','Sports_19']
+                l = ['FootBall','Sports','Sports Importance','Rugby','Importance of Football','Running','VolleyBall','BasketBall','Sports importance in Children ','Hockey','Cricket','Gaelic football ','Golf ','Table tennis','Badminton','Handball','Wrestling','Ball badminton','Fives','Basketball']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'News':
-                l = ['News_1','News_2','News_3','News_4','News_5','News_6','News_7','News_8','News_9','News_10','News_11','News_12','News_13','News_14','News_15','News_16','News_17','News_18','News_19']
+                l = ['News_1','Tronc buys the news','Krystal profit','New York times','Bhopal gas tragedy','BBC','FOX News','Child Friendly news','Birmingham','The Hindu','Census','President poll','Australia Dam','NASA','World News','Hitler death','Massacred','Weather report','Hawaii Exclusive','Cricket News']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Covid_Resources':
@@ -123,7 +123,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Education':
-                l = ['Education_1','Education_2','Education_3','Education_4','Education_5','Education_6','Education_7','Education_8','Education_9','Education_10','Education_11','Education_12','Education_13','Education_14','Education_15','Education_16','Education_17','Education_18','Education_19']
+                l = ['Education','ClassRoom','Books','Graduate','MBBS','Advantages of Education','Robotics','Artificial Intelligence','Botany','Zoology','Mathematics','English','Physics','Chemistry','Python','Java','Library','Smart classrooms','Online courses','Online platforms']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Mental_Health':
@@ -135,7 +135,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Technology':
-                l = ['Technology_1','Technology_2','Technology_3','Technology_4','Technology_5','Technology_6','Technology_7','Technology_8','Technology_9','Technology_10','Technology_11','Technology_12','Technology_13','Technology_14','Technology_15','Technology_16','Technology_17','Technology_18','Technology_19']
+                l = ['Artificial intelligence','Internet of Things','Robotics','Intelligent Apps','Blockchain','5G ','Machine Learning','Robotic Process Automation','Cognitive Computing ','VR','Edge computing','Internet of Behaviors ','DevSecOps ','Tactile Virtual Reality','Big Data Analytics ','Human Augmentation ','Everything-as-a-Service (XaaS)','Cybersecurity','Edge computing']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
                 
     return render(request=request, template_name='main/welcome.html')   
