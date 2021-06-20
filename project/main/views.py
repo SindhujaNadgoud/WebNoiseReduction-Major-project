@@ -111,11 +111,11 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Sports':
-                l = ['FootBall','Sports','Sports Importance','Rugby','Importance of Football','Running','VolleyBall','BasketBall','Sports importance in Children ','Hockey','Cricket','Gaelic football ','Golf ','Table tennis','Badminton','Handball','Wrestling','Ball badminton','Fives','Basketball']
+                l = ['FootBall','Sports','Sports Importance','Rugby','Importance of Football','Running','VolleyBall','BasketBall','Sports importance in Children','Hockey','Cricket','Gaelic football','Golf','Table tennis','Badminton','Handball','Wrestling','Ball badminton','Fives','Basketball']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'News':
-                l = ['News_1','Tronc buys the news','Krystal profit','New York times','Bhopal gas tragedy','BBC','FOX News','Child Friendly news','Birmingham','The Hindu','Census','President poll','Australia Dam','NASA','World News','Hitler death','Massacred','Weather report','Hawaii Exclusive','Cricket News']
+                l = ['News anchor','Tronc buys the news','Krystal profit','New York times','Bhopal gas tragedy','BBC','FOX News','Child Friendly news','Birmingham','The Hindu','Census','President poll','Australia Dam','NASA','World News','Hitler death','Massacred','Weather report','Hawaii Exclusive','Cricket News']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Covid_Resources':
@@ -123,7 +123,7 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Education':
-                l = ['Education','ClassRoom','Books','Graduate','MBBS','Advantages of Education','Robotics','Artificial Intelligence','Botany','Zoology','Mathematics','English','Physics','Chemistry','Python','Java','Library','Smart classrooms','Online courses','Online platforms']
+                l = ['Education','ClassRoom','Books','Graduate','MBBS','Advantages Of Education','Robotics','Artificial Intelligence','Botany','Zoology','Mathematics','English','Physics','Chemistry','Python','Java','Library','Smart classrooms','Online courses','Online platforms']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Mental_Health':
@@ -131,11 +131,11 @@ def view_project(request, topic_id, link_id = 'Default'):
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Art':
-                l = ['Florals','Cherry_Blossoms','Giraffe','Ocean','Lemons','Landscape_1','Watercolor_1','Daisey','Acrylic_Woman','Watercolour_Landscape','Watercolour_Landscape_Blue','Daisy_2','Acrylic_Trees','Ocean_1','Acrylic_Landscape_1','Abstract_1','Watercolour_Landscape_1','Watercolour_Landscape_2','Acrylic_Landscape_2']
+                l = ['Florals','Cherry_Blossoms','Giraffe','Ocean','Lemons','Landscape_1','Watercolor_1','Daisey','Acrylic_Woman','Watercolour_Landscape','Watercolour_Landscape_Blue','Daisy_2','Acrylic_Trees','Ocean_1','Acrylic_Landscape_1','Abstract_1','Acrylic_Landscape_2','Watercolour_Landscape_1','Watercolour_Landscape_2','Acrylic_Landscape_3']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
 
             if topic_id == 'Technology':
-                l = ['Artificial intelligence','Internet of Things','Robotics','Intelligent Apps','Blockchain','5G ','Machine Learning','Robotic Process Automation','Cognitive Computing ','VR','Edge computing','Internet of Behaviors ','DevSecOps ','Tactile Virtual Reality','Big Data Analytics ','Human Augmentation ','Everything-as-a-Service (XaaS)','Cybersecurity','Edge computing']
+                l = ['Artificial intelligence','Internet of Things','Robotics','Intelligent Apps','Blockchain','5G','Machine Learning','Robotic Process Automation','Cognitive Computing','VR','Edge computing','Internet of Behaviors','DevSecOps','Tactile Virtual Reality','Big Data Analytics','Human Augmentation1','Everything-as-a-Service (XaaS)','Cybersecurity','Edge computing']
                 return render(request=request, template_name='main/'+topic_id+'/'+topic_id.lower()+str(l.index(link_id)+1)+'.html', context = context)
                 
     return render(request=request, template_name='main/welcome.html')   
