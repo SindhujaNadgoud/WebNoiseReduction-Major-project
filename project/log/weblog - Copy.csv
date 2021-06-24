@@ -131,6 +131,7 @@ http://127.0.0.1:8000/,KrishnaPriya,/view_project/Art/Acrylic_Landscape_1,2021-0
 http://127.0.0.1:8000/,KrishnaPriya,/view_project/Art/Landscape_1,2021-06-20 13:09:45,http://127.0.0.1:8000/view_project/Art/Landscape_1
 http://127.0.0.1:8000/,KrishnaPriya,/view_project/Art/Acrylic_Landscape_1,2021-06-20 13:10:24,http://127.0.0.1:8000/view_project/Art/Acrylic_Landscape_1
 http://127.0.0.1:8000/,KrishnaPriya,/view_project/Art/Daisey,2021-06-20 13:10:29,http://127.0.0.1:8000/view_project/Art/Daisey
+
 http://127.0.0.1:8000/,YaramadaAkshara,/,2021-06-20 12:37:38,http://127.0.0.1:8000/
 http://127.0.0.1:8000/,KrishnaPriya,/welcome,2021-06-20 12:40:16,http://127.0.0.1:8000/welcome
 http://127.0.0.1:8000/,KrishnaPriya,/welcome,2021-06-20 12:40:24,http://127.0.0.1:8000/welcome
@@ -7423,6 +7424,8 @@ http://127.0.0.1:8000/,Jaya,/view_project/Sports/Running,2021-06-19 00:00:11,htt
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Running,2021-06-19 00:00:14,http://127.0.0.1:8000/view_project/Sports/Running
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Running,2021-06-19 00:00:17,http://127.0.0.1:8000/view_project/Sports/Running
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Running,2021-06-19 00:00:19,http://127.0.0.1:8000/view_project/Sports/Running
+http://127.0.0.1:8000/,Jaya,/view_project/Sports/Sports Importance,2021-06-19 00:00:25,http://127.0.0.1:8000/view_project/Sports/Sports Importance
+http://127.0.0.1:8000/,Jaya,/view_project/Sports/VolleyBall,2021-06-19 
 http://127.0.0.1:8000/,Jaya,/welcome,2021-06-19 00:01:31,http://127.0.0.1:8000/welcome
 http://127.0.0.1:8000/,Jaya,/welcome,2021-06-19 00:01:55,http://127.0.0.1:8000/welcome
 http://127.0.0.1:8000/,Jaya,/view_project/Covid_Resources,2021-06-19 00:01:55,http://127.0.0.1:8000/view_project/Covid_Resources
@@ -8325,27 +8328,3 @@ http://127.0.0.1:8000/,Jaya,/view_project/Sports/Sports,2021-06-19 00:25:50,http
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Sports Importance,2021-06-19 00:25:51,http://127.0.0.1:8000/view_project/Sports/Sports Importance
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Gaelic football,2021-06-19 00:25:54,http://127.0.0.1:8000/view_project/Sports/Gaelic football
 http://127.0.0.1:8000/,Jaya,/view_project/Sports/Gaelic football,2021-06-19 00:25:56,http://127.0.0.1:8000/view_project/Sports/Gaelic football
-http://127.0.0.1:8000/,,/,2021-06-21 19:14:45,http://127.0.0.1:8000/
-http://127.0.0.1:8000/,SureshKumar,/welcome,2021-06-21 19:16:04,http://127.0.0.1:8000/welcome
-http://127.0.0.1:8000/,SureshKumar,/welcome,2021-06-21 19:16:11,http://127.0.0.1:8000/welcome
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports,2021-06-21 19:16:11,http://127.0.0.1:8000/view_project/Sports
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports/Sports Importance,2021-06-21 19:16:13,http://127.0.0.1:8000/view_project/Sports/Sports Importance
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports/Cricket,2021-06-21 19:16:38,http://127.0.0.1:8000/view_project/Sports/Cricket
-http://127.0.0.1:8000/,SureshKumar,/view_project/Art,2021-06-21 19:16:46,http://127.0.0.1:8000/view_project/Art
-http://127.0.0.1:8000/,SureshKumar,/view_project/Art/Daisy_2,2021-06-21 19:16:47,http://127.0.0.1:8000/view_project/Art/Daisy_2
-http://127.0.0.1:8000/,SureshKumar,/,2021-06-24 20:05:50,http://127.0.0.1:8000/
-http://127.0.0.1:8000/,SureshKumar,/welcome,2021-06-24 20:05:55,http://127.0.0.1:8000/welcome
-http://127.0.0.1:8000/,SureshKumar,/welcome,2021-06-24 21:02:02,http://127.0.0.1:8000/welcome
-http://127.0.0.1:8000/,SureshKumar,/view_project/News,2021-06-24 21:02:02,http://127.0.0.1:8000/view_project/News
-http://127.0.0.1:8000/,SureshKumar,/view_project/News/BBC,2021-06-24 21:02:06,http://127.0.0.1:8000/view_project/News/BBC
-http://127.0.0.1:8000/,SureshKumar,/view_project/News/Child Friendly news,2021-06-24 21:02:11,http://127.0.0.1:8000/view_project/News/Child Friendly news
-http://127.0.0.1:8000/,SureshKumar,/view_project/Mental_Health,2021-06-24 21:02:21,http://127.0.0.1:8000/view_project/Mental_Health
-http://127.0.0.1:8000/,SureshKumar,/view_project/Mental_Health/WorldMenthaHealth,2021-06-24 21:02:22,http://127.0.0.1:8000/view_project/Mental_Health/WorldMenthaHealth
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports,2021-06-24 21:02:28,http://127.0.0.1:8000/view_project/Sports
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports/Gaelic football,2021-06-24 21:02:30,http://127.0.0.1:8000/view_project/Sports/Gaelic football
-http://127.0.0.1:8000/,SureshKumar,/view_project/Sports/VolleyBall,2021-06-24 21:02:34,http://127.0.0.1:8000/view_project/Sports/VolleyBall
-http://127.0.0.1:8000/,SureshKumar,/view_project/Art,2021-06-24 21:02:39,http://127.0.0.1:8000/view_project/Art
-http://127.0.0.1:8000/,SureshKumar,/view_project/Art/Ocean,2021-06-24 21:02:43,http://127.0.0.1:8000/view_project/Art/Ocean
-http://127.0.0.1:8000/,SureshKumar,/view_project/Cinema,2021-06-24 21:02:48,http://127.0.0.1:8000/view_project/Cinema
-http://127.0.0.1:8000/,SureshKumar,/view_project/Covid_Resources,2021-06-24 21:02:55,http://127.0.0.1:8000/view_project/Covid_Resources
-http://127.0.0.1:8000/,SureshKumar,/view_project/Covid_Resources/StayHome,2021-06-24 21:02:57,http://127.0.0.1:8000/view_project/Covid_Resources/StayHome

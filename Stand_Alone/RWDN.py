@@ -39,10 +39,12 @@ def upload():
     filename = askopenfilename(initialdir = "dataset")
     #pathlabel.config(text=filename)
     #text.insert(END,'Dataset Uploaded')
+    deb=0
     with open(filename, "r") as file:
       for line in file:
        line = line.strip('\n')
        arr = line.split(",")
+       
        if j > 0:
          up = UserProfile()
          up.setServer(arr[0])
@@ -86,7 +88,7 @@ def findSession():
         if frequency > 1 and up.getWebpage()!="/welcome" and up.getWebpage()!="/" and up.getWebpage()!="/view_project/Art"  and up.getWebpage()!="/view_project/News"  and up.getWebpage()!="/view_project/Mental_Health"  and up.getWebpage()!="/view_project/Education"  and up.getWebpage()!="/view_project/Sports"  and up.getWebpage()!="/view_project/Cinema"  and up.getWebpage()!="/view_project/Covid_Resources"  and up.getWebpage()!="/view_project/News":
           count = getDepth(up.getUser());
           weight = (frequency/count) * 100;
-          print("User ID : "+up.getUser()+" Frequency : "+str(frequency)+" webpage:"+up.getWebpage())
+         # print("User ID : "+up.getUser()+" Frequency : "+str(frequency)+" webpage:"+up.getWebpage())
           up.setFrequency(frequency)
           up.setWeight(weight);
           up.setPageDepth(count)
@@ -123,7 +125,7 @@ def findSession():
         technology = technology + 1;
       if 'News' in webpages_frequent[i]:
         news = news + 1
-        print("news  "+str(news))
+       # print("news  "+str(news))
       if 'Cinema' in webpages_frequent[i]:
         cinema = cinema + 1
       if 'Sports' in webpages_frequent[i]:
@@ -139,35 +141,35 @@ def findSession():
     if technology>0:
       lst.append(technology)
       mylabels.append("Technology")
-      print("technology"+str(technology))
+      #print("technology"+str(technology))
     if news>0:
       lst.append(news)
       mylabels.append("News")
-      print("news"+str(news))
+     # print("news"+str(news))
     if covid>0:
       lst.append(covid)
       mylabels.append("Covid Resources")
-      print("covid"+str(covid))
+      #print("covid"+str(covid))
     if health>0:
       lst.append(health)
       mylabels.append("Health")
-      print("health"+str(health))
+     # print("health"+str(health))
     if art>0:
       lst.append(art)
       mylabels.append("Art")
-      print("art"+str(art))
+      #print("art"+str(art))
     if edu>0:
       lst.append(edu)
       mylabels.append("Education")
-      print("edu"+str(edu))
+      #print("edu"+str(edu))
     if sports>0:
       lst.append(sports)
       mylabels.append("Sports")
-      print("sports"+str(sports))
+     # print("sports"+str(sports))
     if cinema>0:
       lst.append(cinema)
       mylabels.append("Cinema")
-      print("cinema"+str(cinema))
+      #print("cinema"+str(cinema))
     
     y = np.array(lst)
     print("the list")
@@ -229,7 +231,7 @@ def viewuserprofile():
     global input 
     p_dict = {}
     input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
-    text.insert(END,"User ID\t\t\t\tFrequency\t\t\t\t\tWeb Page Name")
+    text.insert(END,"User ID\t\t\t\t\tWeb Page Name")
     text.insert(END,"\n")
     with open(filename, "r") as o:
       f_lines = o.readlines()
@@ -241,12 +243,12 @@ def viewuserprofile():
         else:
           p_dict[r[4]] += 1
     for key in p_dict.keys():
-      text.insert(END, input+'\t\t'+str(p_dict[key])+'\t\t\t'+key)
+      text.insert(END, input+'\t\t\t'+key)
 
 def viewinterest():
     text.delete('1.0', END)
    # input = simpledialog.askstring("UserID", "Enter UserID to get interested pages",parent=main)
-    text.insert(END,"User ID\t\t\t\tFrequency\t\tWeight\t\t\tWeb Page Name")
+    text.insert(END,"User ID\t\t\tWeight\t\t\tWeb Page Name")
     text.insert(END,"\n")
     global technology
     technology = 0
@@ -274,7 +276,7 @@ def viewinterest():
     for k, v in depth.items():
       for up in v:
         if(up.getUser() == input):
-          text.insert(END,up.getUser()+"\t\t\t\t"+str(up.getFrequency())+"\t\t"+str(up.getWeight())+"\t\t\t\t"+up.getWebpage()+"\n")
+          text.insert(END,up.getUser()+"\t\t"+str(up.getWeight())+"\t\t\t\t"+up.getWebpage()+"\n")
           text.insert(END,"Complete Page URL : "+up.getURL()+"\n\n")
           if 'Technology' in up.getURL():
             technology = technology + 1;
@@ -360,7 +362,7 @@ def confusionMatrix():
     text.insert(END,"Interest : "+str(interest)+"\n")
     text.insert(END,"Noise : "+str(noise)+"\n")
     #text.insert(END,"Potential : "+str(potential)+"\n")
-    text.insert(END,"Total : "+str(total_count)+"\n")
+   # text.insert(END,"Total : "+str(total_count)+"\n")
     '''
     text.insert(END,"SVM Confusion Matrix\n\n");
     text.insert(END,"Interest : "+str(sinterest)+"\n")
